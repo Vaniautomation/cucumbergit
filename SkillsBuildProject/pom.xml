@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>rahulshettyacademy</groupId>
+  <groupId>SkillsBuildProject</groupId>
   <artifactId>CucumberFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -69,9 +69,13 @@
     <artifactId>selenium-java</artifactId>
     <version>4.1.1</version>
 </dependency>
+<dependency>
+<groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <optional>true</optional>
 
-
-   
+  </dependency> 
   </dependencies>
 
   <build>
@@ -81,6 +85,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
       </plugin>
+   
+     
     </plugins>
   </build>
 </project>

@@ -1,0 +1,10 @@
+pageObjects\RegisterPage.class
+utils\TestBase.class
+utils\TestContextSetup.class
+pageObjects\FeaturecodePage.class
+cucumberOptions\TestNGTestRunner.class
+stepDefinitions\featurecode.class
+pageObjects\PageObjectManager.class
+utils\GenericUtils.class
+cucumberOptions\FailedTestRunner.class
+stepDefinitions\register.class

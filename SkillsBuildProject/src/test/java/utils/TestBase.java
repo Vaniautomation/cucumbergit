@@ -10,6 +10,7 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import pageObjects.RegisterPage;
@@ -30,8 +31,8 @@ public class TestBase {
 		String browser_properties = prop.getProperty("browser");
 		String browser_maven=System.getProperty("browser");
 		// result = testCondition ? value1 : value2
-		
-		String browser = browser_maven!=null ? browser_maven : browser_properties;
+		String browser = browser_properties;
+	//	String browser = browser_maven!=null ? browser_maven : browser_properties;
 		
 		
 		
@@ -41,7 +42,11 @@ public class TestBase {
 			{
 				
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//test//java//resources//chromedriver");
-		driver = new ChromeDriver();// driver gets the life
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);// driver gets the life
+		
+	
 			}
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
