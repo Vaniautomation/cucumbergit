@@ -20,20 +20,19 @@
 Feature: Check featurecode
  
 
-  #@Featurecodepass
-  #Scenario: Test Featurecode Pass
-    #Given User on the home Page
-    #Then Login as faculty with id "a2mtsecured@mailinator.com"and pwd "Welcome2ibm1234"
-    #And Click on Topics IBM cloud page
-    #And Click on software featurecode card
-    #Then Check featurecode
+  @Featurecodepass @Regression
+ Scenario: Test Featurecode Pass
+    Given User on the home Page
+    Then Login as faculty with id "a2mtsecured@mailinator.com"and pwd "Welcome2ibm1234"
+    And Click on Topics IBM cloud page
+    And Click on software featurecode card
+    Then Check featurecode
    
 
-  @Featurecodefail
+@Featurecodefail @Regression
   Scenario: Test Featurecode Pass
     Given User on the home Page
-    Then Click Register and Enter "a2mtfaculty@mailinator.com"
-    When Login as faculty with password "Welcome3ibm"
+    Then Login as faculty with the id "a2mtnextgid4@mailinator.com"and pwd "Welcome2ibm"
     And Click on Topics IBM cloud page
     And Click on software featurecode card
     Then Check featurecodefail

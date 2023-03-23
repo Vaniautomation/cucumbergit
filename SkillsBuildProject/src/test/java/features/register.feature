@@ -18,23 +18,23 @@
 #Sample Feature Definition Template
 Feature: Register users
 
-  @RegisterFaculty
+  @RegisterFaculty @Regression
   Scenario: Registering as faculty
     Given I'm on the home Page
-    Then Click Register and Enter "a2mtfan17@mailinator.com"
+    Then Click Register and Enter "a2mtfan18@mailinator.com"
     When I select role as "Faculty"
     Then Enter Title,Current degree,Department,agreeTerms,agreePrivacyconsent and register
-  # And Register id in urx "a2mtfan13@mailinator.com"
+ 
   
   
-    @RegisterStudent
+    @RegisterStudent @Regression
   	Scenario: Registering as student
     Given I'm on the home Page
     Then Click Register and Enter "a2mtfan15@mailinator.com"
     When I select role as "Student"
     Then Enter currentdegree,soughtdegree,expectedgradutationdate,month and department
     
-    @RegisterStaff
+    @RegisterStaff @Regression
   Scenario: Registering as staff
     Given I'm on the home Page
     Then Click Register and Enter "a2mtfan16@mailinator.com"

@@ -1,18 +1,14 @@
 package stepDefinitions;
 
-import org.openqa.selenium.WebDriver;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import pageObjects.FeaturecodePage;
-import pageObjects.RegisterPage;
 import utils.TestContextSetup;
 
 public class featurecode {
 	
-	public WebDriver driver;
+	//public WebDriver driver;
 	TestContextSetup testContextSetup;
 	public FeaturecodePage featurecode;
 	
@@ -51,6 +47,16 @@ public class featurecode {
     	featurecode.checkFeaturecode();
     	
     }
-
+    
+    @Then("^Login as faculty with the id \"([^\"]*)\"and pwd \"([^\"]*)\"$")
+    public void login_as_faculty_with_the_id_somethingand_pwd_something(String strArg1, String strArg2) throws Throwable {
+    	 featurecode.Logintoportal(strArg1, strArg2);
+    }
+    
+    @Then("^Check featurecodefail$")
+    public void check_featurecodefail() throws Throwable {
+       featurecode.checkFeaturecodefail();
+    }
+    
 
 }
