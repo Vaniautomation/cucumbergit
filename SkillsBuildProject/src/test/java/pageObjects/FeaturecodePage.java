@@ -43,7 +43,7 @@ public class FeaturecodePage {
 	By clodFClink= By.xpath("(//*[name()='svg'][@focusable='false'])[31]");
 	By Fcodetext=By.xpath("//h3[contains(text(),'IBM Cloud Feature Code')]");
 	By featurecodecardlnk = By.xpath("//a[@class='bx--link bx--card__footer']");
-	By featurecodelnk= By.xpath("//a[normalize-space()='Request Feature Code']");
+	//By featurecodelnk= By.xpath("//a[normalize-space()='Request Feature Code']");
 	By fcodetext= By.xpath("(//div[contains(text(),'Your IBM Cloud Promo Code is:')])[1]");
 	By okbtn=By.xpath("//button[@class='bx--btn bx--btn--secondary']");
 	
@@ -111,14 +111,14 @@ driver.manage().window().maximize();
 		}
 		
 		public void checkFeaturecode() {
-driver.findElement(featurecodelnk).click();
+driver.findElement(clodFClink).click();
 String tempcode= driver.findElement(fcodetext).getText().toString();
 System.out.println("Feature code"+ tempcode);
 driver.findElement(okbtn).click();
 //driver.close();
 		}
 		public void checkFeaturecodefail() {
-			driver.findElement(featurecodelnk).click();
+			driver.findElement(clodFClink).click();
 			String tempcode= driver.findElement(Featurecodefailmesg).getText().toString();
 			System.out.println("Feature code fail message"+ tempcode);
 			//driver.close();;
